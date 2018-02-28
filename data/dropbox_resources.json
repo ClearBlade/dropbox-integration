@@ -1,0 +1,26 @@
+{
+    "app_id": "aea2b8a90b90c1deb3a2a396d3bc01",
+    "collection_id": "d6a2b8a90bf6eba9b28dd6a0a68001",
+    "items": [],
+    "name": "dropbox_resources",
+    "permissions": {
+        "Authenticated": 1
+    },
+    "schema": [
+        {
+            "ColumnName": "item_id",
+            "ColumnType": "uuid",
+            "PK": true
+        },
+        {
+            "ColumnName": "filename",
+            "ColumnType": "string",
+            "PK": false
+        },
+        {
+            "ColumnName": "url",
+            "ColumnType": "string",
+            "PK": false
+        }
+    ]
+}
