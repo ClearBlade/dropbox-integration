@@ -1,0 +1,34 @@
+{
+    "author": {
+        "email": "rreinold@clearblade.com"
+    },
+    "clouds": [],
+    "description": "Integrating role-based authorization for DropBox assets",
+    "domains": [],
+    "gateways": [],
+    "image_url": "https://a.slack-edge.com/7f1a0/plugins/dropbox/assets/service_512.png",
+    "keywords": [
+        "clearblade",
+        "iot",
+        "platform",
+        "drop",
+        "box",
+        "dropbox",
+        "file",
+        "sharing",
+        "storage",
+        "s3",
+        "hosting",
+        "host"
+    ],
+    "license": "MIT",
+    "name": "dropbox-integration",
+    "private": false,
+    "prog_lang": [],
+    "protocols": [
+        "http",
+        "https"
+    ],
+    "things": [],
+    "version": "1.0.0"
+}
