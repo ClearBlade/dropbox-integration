@@ -1,7 +1,8 @@
 {
     "author": {
-        "email": "rreinold@clearblade.com"
+        "email": "rob@clearblade.com"
     },
+    "asset_types":["Code Services"],
     "clouds": [],
     "description": "Integrating role-based authorization for DropBox assets",
     "domains": [],
