@@ -3,7 +3,7 @@
 
 ## Overview
 
-Provide role-based authorization for Dropbox. 
+Provide role-based authorization for Dropbox. This package helps user to get contents of a file on dropbox using the filename. It assumes the user enters the corresponding {fileName, url} tuple in the collection.
 
 This is an ipm package, which contains one or more reusable assets within the ipm Community. The 'package.json' in this repo is a ipm spec's package.json, [here](https://docs.clearblade.com/v/3/6-ipm/spec), which is a superset of npm's package.json spec, [here](https://docs.npmjs.com/files/package.json).
 
@@ -28,11 +28,17 @@ The DropboxLib provides user with a method to get contents of file using the fil
 
 To test call `FetchDropboxAsset` with relevant parameters as an Authenticated User.
 
+
 ##Assets
 
 ### Code Services
 
 * `FetchDropboxAsset` - Fetch the contents of an access-controlled Dropbox Resource
+
+### Code Libraries
+
+* `DropboxLib` - This library provides a method to get file contents from Dropbox using a filename. It internally uses a collection to get dropbox url for corresponding filename. 
+***Note***: User needs to add a new file, url entry in the collections before trying to access it.
 
 ### Collections
 
