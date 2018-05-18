@@ -2,14 +2,14 @@
 
 /**
  * DropBox is a file Manager Service Software
- * @typedef {Object} DropboxLib
+ * @typedef {Object} Dropbox
  * @param {string} collectionName
  * 
  * @example 
- * var dropbox = DropboxLib(collectionName);
+ * var dropbox = Dropbox(collectionName);
  * 
  */
-function DropboxLib(collectionName) {
+function Dropbox(collectionName) {
 
 
     function _isValidString(str) {
@@ -19,12 +19,12 @@ function DropboxLib(collectionName) {
     /**
      * 
      * @typedef {Object} GetFile
-     * @memberof DropboxLib
+     * @memberof Dropbox
      * @param {string} fileName
      * @param {callback} callback
      * 
      * @example  
-     * var dropbox = DropboxLib(collectionName);
+     * var dropbox = Dropbox(collectionName);
      * ClearBlade.init({request:req}); // Where request has systemKey and systemSecret information
      * dropbox.GetFile(fileName, function(err, resp){
      *     if(err ){

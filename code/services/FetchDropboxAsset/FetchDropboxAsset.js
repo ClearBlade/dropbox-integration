@@ -14,7 +14,7 @@ function FetchDropboxAsset(req, resp) {
     const fileName = req.params.fileName;
     ClearBlade.init({ request: req });
 
-    var dropbox = DropboxLib(COLLECTION);
+    var dropbox = Dropbox(COLLECTION);
 
     dropbox.GetFile(fileName, function (err, data) {
         if (err) {

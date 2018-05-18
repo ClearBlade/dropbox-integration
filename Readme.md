@@ -61,12 +61,12 @@ DropBox is a file Manager Service Software
 **Example**  
 
 ```js
-var dropbox = DropboxLib(collectionName);
+var dropbox = Dropbox(collectionName);
 ```
-<a name="DropboxLib.GetFile"></a>
+<a name="Dropbox.GetFile"></a>
 
-### DropboxLib.GetFile : <code>Object</code>
-**Kind**: static typedef of [<code>DropboxLib</code>](#DropboxLib)  
+### Dropbox.GetFile : <code>Object</code>
+**Kind**: static typedef of [<code>Dropbox</code>](#Dropbox)  
 
 | Param | Type |
 | --- | --- |
@@ -76,9 +76,9 @@ var dropbox = DropboxLib(collectionName);
 **Example** 
  
 ```js
-// Need to init into ClearBlade as DropboxLib uses it internally.
+// Need to init into ClearBlade as Dropbox uses it internally.
 ClearBlade.init({request:req});
-var dropbox = DropboxLib(collectionName);
+var dropbox = Dropbox(collectionName);
 dropbox.GetFile(fileName, function(err, resp){
     if(err ){
       resp.error("Failed to GET File from Dropbox: " + JSON.stringify(err));
