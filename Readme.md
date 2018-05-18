@@ -3,7 +3,7 @@
 
 ## Overview
 
-Provide role-based authorization for Dropbox
+Provide role-based authorization for Dropbox. 
 
 This is an ipm package, which contains one or more reusable assets within the ipm Community. The 'package.json' in this repo is a ipm spec's package.json, [here](https://docs.clearblade.com/v/3/6-ipm/spec), which is a superset of npm's package.json spec, [here](https://docs.npmjs.com/files/package.json).
 
@@ -20,27 +20,55 @@ This package contains an example S3 Object to fetch, and can be run upon a fresh
 1. Create account: https://www.dropbox.com/
 2. Upload asset to provide access control upon
 3. Place assets URLs in `dropbox_resources` collection
-4. Can fetch file contents via the `FetchDropboxAsset` code service
+4. Can use the library method `DropboxLib.GetFile` to fetch file contents.
+5. An example code service `FetchDropboxAsset` implements the same.
 
 ## API
 
-<a name="FetchDropboxAsset"></a>
+<a name="DropboxLib"></a>
 
-#### FetchDropboxAsset(filename) ⇒ <code>string</code>
-Fetch the contents of an access-controlled Dropbox Resource
+## DropboxLib : <code>Object</code>
+DropBox is a file Manager Service Software
 
-**Kind**: global function
-**Returns**: <code>string</code> - content - contents of Dropbox hosted file
+**Kind**: global typedef  
 
-  
-| Param | Type | Description |  
-|:---:|:---:|:---:|  
-| filename | <code>string</code> | filename associated with a row in dropbox_resources collection |  
+| Param | Type |
+| --- | --- |
+| collectionName | <code>string</code> | 
+| cbInitInfo | <code>Object</code> | 
 
+**Example**  
+```js
+var cbInitInfo = req; // Required: req.systemKey, req.systemSecret
+var dropbox = DropboxLib(collectionName, cbInitInfo);
+```
+<a name="DropboxLib.GetFile"></a>
+
+### DropboxLib.GetFile(fileName, callback)
+This method gets the url from the fileName and fetches it's content from Dropbox.
+
+**Kind**: static method of [<code>DropboxLib</code>](#DropboxLib)  
+
+| Param | Type |
+| --- | --- |
+| fileName | <code>string</code> | 
+| callback | <code>callback</code> | 
+
+**Example**  
+```js
+var dropbox = DropboxLib(collectionName,cbInitInfo);
+dropbox.GetFile(fileName, function(err, resp){
+    if(err ){
+      resp.error("Failed to GET File from Dropbox: " + JSON.stringify(err));
+    }
+    resp.success(data);          
+}
+```
 
 ## Usage
+The DropboxLib provides user with a method to get contents of file using the filename. It does so under the assumption that the file name exists in the collection with a valid Url.
 
-Call `FetchDropboxAsset` as an Authenticated User
+To test call `FetchDropboxAsset` with relevant parameters as an Authenticated User.
 
 ### Code Services
 
@@ -49,9 +77,3 @@ Call `FetchDropboxAsset` as an Authenticated User
 ### Collections
 
 `dropbox_resources` - Stores key/value pairs of filenames and their respective URLs in Dropbox
-
-### ...
-
-## Thank you
-
-Powered by ClearBlade Enterprise IoT Platform: [https://platform.clearblade.com](https://platform.clearblade.com)
