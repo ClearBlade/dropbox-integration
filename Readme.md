@@ -23,6 +23,22 @@ This package contains an example S3 Object to fetch, and can be run upon a fresh
 4. Can use the library method `DropboxLib.GetFile` to fetch file contents.
 5. An example code service `FetchDropboxAsset` implements the same.
 
+## Usage
+The DropboxLib provides user with a method to get contents of file using the filename. It does so under the assumption that the file name exists in the collection with a valid Url.
+
+To test call `FetchDropboxAsset` with relevant parameters as an Authenticated User.
+
+##Assets
+
+### Code Services
+
+* `FetchDropboxAsset` - Fetch the contents of an access-controlled Dropbox Resource
+
+### Collections
+
+* `dropbox_resources` - Stores key/value pairs of filenames and their respective URLs in Dropbox
+
+
 ## API
 
 <a name="DropboxLib"></a>
@@ -37,7 +53,8 @@ DropBox is a file Manager Service Software
 | collectionName | <code>string</code> | 
 | cbInitInfo | <code>Object</code> | 
 
-**Example**  
+**Example** 
+ 
 ```js
 var cbInitInfo = req; // Required: req.systemKey, req.systemSecret
 var dropbox = DropboxLib(collectionName, cbInitInfo);
@@ -55,6 +72,7 @@ This method gets the url from the fileName and fetches it's content from Dropbox
 | callback | <code>callback</code> | 
 
 **Example**  
+
 ```js
 var dropbox = DropboxLib(collectionName,cbInitInfo);
 dropbox.GetFile(fileName, function(err, resp){
@@ -65,15 +83,3 @@ dropbox.GetFile(fileName, function(err, resp){
 }
 ```
 
-## Usage
-The DropboxLib provides user with a method to get contents of file using the filename. It does so under the assumption that the file name exists in the collection with a valid Url.
-
-To test call `FetchDropboxAsset` with relevant parameters as an Authenticated User.
-
-### Code Services
-
-`FetchDropboxAsset` - Fetch the contents of an access-controlled Dropbox Resource
-
-### Collections
-
-`dropbox_resources` - Stores key/value pairs of filenames and their respective URLs in Dropbox
