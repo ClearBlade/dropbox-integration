@@ -33,7 +33,7 @@ To test call `FetchDropboxAsset` with relevant parameters as an Authenticated Us
 
 ### Code Services
 
-* `FetchDropboxAsset` - Fetch the contents of an access-controlled Dropbox Resource
+* `FetchDropboxAsset` - Fetch the contents of an access-controlled Dropbox Resource. ___Note___: Make sure to initialize ClearBlade Object, before calling the Library methods. i.e. `ClearBlade.init({request:req});`
 
 ### Code Libraries
 
@@ -57,30 +57,28 @@ DropBox is a file Manager Service Software
 | Param | Type |
 | --- | --- |
 | collectionName | <code>string</code> | 
-| cbInitInfo | <code>Object</code> | 
 
-**Example** 
- 
+**Example**  
+
 ```js
-var cbInitInfo = req; // Required: req.systemKey, req.systemSecret
-var dropbox = DropboxLib(collectionName, cbInitInfo);
+var dropbox = DropboxLib(collectionName);
 ```
 <a name="DropboxLib.GetFile"></a>
 
-### DropboxLib.GetFile(fileName, callback)
-This method gets the url from the fileName and fetches it's content from Dropbox.
-
-**Kind**: static method of [<code>DropboxLib</code>](#DropboxLib)  
+### DropboxLib.GetFile : <code>Object</code>
+**Kind**: static typedef of [<code>DropboxLib</code>](#DropboxLib)  
 
 | Param | Type |
 | --- | --- |
 | fileName | <code>string</code> | 
 | callback | <code>callback</code> | 
 
-**Example**  
-
+**Example** 
+ 
 ```js
-var dropbox = DropboxLib(collectionName,cbInitInfo);
+// Need to init into ClearBlade as DropboxLib uses it internally.
+ClearBlade.init({request:req});
+var dropbox = DropboxLib(collectionName);
 dropbox.GetFile(fileName, function(err, resp){
     if(err ){
       resp.error("Failed to GET File from Dropbox: " + JSON.stringify(err));
@@ -88,4 +86,3 @@ dropbox.GetFile(fileName, function(err, resp){
     resp.success(data);          
 }
 ```
-
