@@ -36,7 +36,7 @@
     "bugs": {
         "url": "https://github.com/rreinold/dropbox-integration/issues"
     },
-    "homepage": "https://github.com/rreinold/dropbox-integration#readme"
+    "homepage": "https://github.com/rreinold/dropbox-integration#readme",
     "devDependencies": {
         "jsdoc-to-markdown": "^4.0.1"
     }
