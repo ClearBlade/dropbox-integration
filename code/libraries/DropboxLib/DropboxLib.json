@@ -1,0 +1,8 @@
+{
+    "api": "",
+    "dependencies": "http,clearblade",
+    "description": "This library simplifies the access to dropbox assets.",
+    "name": "DropboxLib",
+    "version": 23,
+    "visibility": "system"
+}

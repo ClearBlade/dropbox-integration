@@ -1,6 +1,6 @@
 {
-    "current_version": 31,
-    "dependencies": "clearblade,http",
+    "current_version": 43,
+    "dependencies": "clearblade,http,DropboxLib",
     "logging_enabled": "false",
     "name": "FetchDropboxAsset",
     "params": [],

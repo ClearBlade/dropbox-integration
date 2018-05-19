@@ -1,8 +1,6 @@
 {
-    "author": {
-        "email": "rob@clearblade.com"
-    },
-    "asset_types":["Code Services"],
+    "author": "Rob Reinold <rob@clearblade.com>",
+    "asset_types":["Code Services", "Code Libraries"],
     "clouds": [],
     "description": "Integrating role-based authorization for DropBox assets",
     "domains": [],
@@ -25,11 +23,21 @@
     "license": "MIT",
     "name": "dropbox-integration",
     "private": false,
-    "prog_lang": [],
+    "prog_lang": ["Javascript"],
     "protocols": [
         "http",
         "https"
     ],
+    "scripts": {
+        "jsdoc": "jsdoc2md code/*/*/*.js > jsdoc.md"
+    },
     "things": [],
-    "version": "1.0.0"
+    "version": "2.0.0",
+    "bugs": {
+        "url": "https://github.com/rreinold/dropbox-integration/issues"
+    },
+    "homepage": "https://github.com/rreinold/dropbox-integration#readme",
+    "devDependencies": {
+        "jsdoc-to-markdown": "^4.0.1"
+    }
 }
