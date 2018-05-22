@@ -13,9 +13,9 @@ This is an ipm package, which contains one or more reusable assets within the ip
 
 ### - Out of the Box
 
-This package contains an example S3 Object to fetch, and can be run upon a fresh install. Run `DropboxExampleFetchAsset`
+This package contains an example Dropbox Object to fetch, and can be run upon a fresh install. Run `DropboxExampleFetchAsset`
 
-### - Integration with Developer's S3 Buckets
+### - Integration with Developer's Dropbox Assets
 
 1. Create account: https://www.dropbox.com/
 2. Upload asset to provide access control upon
