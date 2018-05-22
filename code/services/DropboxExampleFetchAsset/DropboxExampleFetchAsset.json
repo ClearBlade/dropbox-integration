@@ -2,11 +2,11 @@
     "current_version": 43,
     "dependencies": "clearblade,http,DropboxLib",
     "logging_enabled": "false",
-    "name": "FetchDropboxAsset",
+    "name": "DropboxExampleFetchAsset",
     "params": [],
     "permissions": {
         "Authenticated": 1
     },
     "run_user": "",
-    "source": "FetchDropboxAsset.js"
+    "source": "DropboxExampleFetchAsset.js"
 }

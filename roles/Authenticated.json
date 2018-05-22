@@ -6,7 +6,7 @@
         "CodeServices": [
             {
                 "Level": 1,
-                "Name": "FetchDropboxAsset",
+                "Name": "DropboxExampleFetchAsset",
                 "SystemKey": "aea2b8a90b90c1deb3a2a396d3bc01"
             }
         ],

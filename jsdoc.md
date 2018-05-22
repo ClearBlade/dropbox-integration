@@ -1,7 +1,7 @@
 ## Functions
 
 <dl>
-<dt><a href="#FetchDropboxAsset">FetchDropboxAsset(fileName)</a> ⇒ <code>string</code></dt>
+<dt><a href="#DropboxExampleFetchAsset">DropboxExampleFetchAsset(fileName)</a> ⇒ <code>string</code></dt>
 <dd><p>Fetch the contents of an access-controlled Dropbox Resource</p>
 </dd>
 </dl>
@@ -14,9 +14,9 @@
 </dd>
 </dl>
 
-<a name="FetchDropboxAsset"></a>
+<a name="DropboxExampleFetchAsset"></a>
 
-## FetchDropboxAsset(fileName) ⇒ <code>string</code>
+## DropboxExampleFetchAsset(fileName) ⇒ <code>string</code>
 Fetch the contents of an access-controlled Dropbox Resource
 
 **Kind**: global function  

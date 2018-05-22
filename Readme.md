@@ -13,27 +13,27 @@ This is an ipm package, which contains one or more reusable assets within the ip
 
 ### - Out of the Box
 
-This package contains an example S3 Object to fetch, and can be run upon a fresh install. Run `FetchDropboxAsset`
+This package contains an example S3 Object to fetch, and can be run upon a fresh install. Run `DropboxExampleFetchAsset`
 
 ### - Integration with Developer's S3 Buckets
 
 1. Create account: https://www.dropbox.com/
 2. Upload asset to provide access control upon
 3. Place assets URLs in `dropbox_resources` collection
-4. Can use the library method `DropboxLib.GetFile` to fetch file contents.
-5. An example code service `FetchDropboxAsset` implements the same.
+4. Can use the library method `Dropbox.GetFile` to fetch file contents.
+5. An example code service `DropboxExampleFetchAsset` implements the same.
 
 ## Usage
 The DropboxLib provides user with a method to get contents of file using the filename. It does so under the assumption that the file name exists in the collection with a valid Url.
 
-To test call `FetchDropboxAsset` with relevant parameters as an Authenticated User.
+To test call `DropboxExampleFetchAsset` with relevant parameters as an Authenticated User.
 
 
 ## Assets
 
 ### Code Services
 
-* `FetchDropboxAsset` - Fetch the contents of an access-controlled Dropbox Resource. ___Note___: Make sure to initialize ClearBlade Object, before calling the Library methods. i.e. `ClearBlade.init({request:req});`
+* `DropboxExampleFetchAsset` - Fetch the contents of an access-controlled Dropbox Resource. ___Note___: Make sure to initialize ClearBlade Object, before calling the Library methods. i.e. `ClearBlade.init({request:req});`
 
 ### Code Libraries
 
@@ -50,7 +50,7 @@ To test call `FetchDropboxAsset` with relevant parameters as an Authenticated Us
 ## Functions
 
 <dl>
-<dt><a href="#FetchDropboxAsset">FetchDropboxAsset(fileName)</a> ⇒ <code>string</code></dt>
+<dt><a href="#DropboxExampleFetchAsset">DropboxExampleFetchAsset(fileName)</a> ⇒ <code>string</code></dt>
 <dd><p>Fetch the contents of an access-controlled Dropbox Resource</p>
 </dd>
 </dl>
@@ -63,9 +63,9 @@ To test call `FetchDropboxAsset` with relevant parameters as an Authenticated Us
 </dd>
 </dl>
 
-<a name="FetchDropboxAsset"></a>
+<a name="DropboxExampleFetchAsset"></a>
 
-## FetchDropboxAsset(fileName) ⇒ <code>string</code>
+## DropboxExampleFetchAsset(fileName) ⇒ <code>string</code>
 Fetch the contents of an access-controlled Dropbox Resource
 
 **Kind**: global function  

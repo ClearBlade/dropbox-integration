@@ -4,7 +4,7 @@
  * @param {string} fileName - filename associated with a row in dropbox_resources collection
  * @returns {string} content - contents of Dropbox hosted file
  */
-function FetchDropboxAsset(req, resp) {
+function DropboxExampleFetchAsset(req, resp) {
     const COLLECTION = "dropbox_resources";
 
     if (!req.params.fileName || req.params.fileName === "") {
